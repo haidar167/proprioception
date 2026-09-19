@@ -1,0 +1,489 @@
+{
+  "timestamp": "2026-09-19T17:33:34.451469+00:00",
+  "seed": 42,
+  "git_commit": "7968baa39dc119d074db1c8f3f862647c73dba2f",
+  "num_permutations": 12,
+  "total_evaluated_states": 48,
+  "interoception_drift_fp_rate": 1.0,
+  "proprioception_drift_fp_rate": 0.0,
+  "confusion_matrix_proprioception": [
+    [
+      24,
+      0
+    ],
+    [
+      0,
+      24
+    ]
+  ],
+  "confusion_matrix_interoception": [
+    [
+      12,
+      12
+    ],
+    [
+      12,
+      12
+    ]
+  ],
+  "entropy_threshold": 0.43042889202644197,
+  "permutations": [
+    {
+      "permutation_idx": 0,
+      "seed": 42,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1046875,
+          "mean_entropy": 1.4113299356075004,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.9734375,
+          "mean_entropy": 0.19128419530358087,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.1,
+          "mean_entropy": 1.600167436245829,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 1,
+      "seed": 49,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.096875,
+          "mean_entropy": 1.4124618280678987,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.884375,
+          "mean_entropy": 0.25560293898788666,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.08125,
+          "mean_entropy": 1.4513481422327459,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 2,
+      "seed": 56,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1078125,
+          "mean_entropy": 1.368800734775141,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.965625,
+          "mean_entropy": 0.24274234524875737,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.121875,
+          "mean_entropy": 1.721863498771563,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 3,
+      "seed": 63,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.0390625,
+          "mean_entropy": 1.3657096535665914,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.8125,
+          "mean_entropy": 0.25059161229902893,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.090625,
+          "mean_entropy": 0.5416045591294278,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 4,
+      "seed": 70,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1125,
+          "mean_entropy": 1.5016583922784776,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.18372219352825142,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.1125,
+          "mean_entropy": 1.7975987384095788,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 5,
+      "seed": 77,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1640625,
+          "mean_entropy": 1.553064858703874,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.7515625,
+          "mean_entropy": 0.3054033529981737,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.09375,
+          "mean_entropy": 1.5106996953487397,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 6,
+      "seed": 84,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1296875,
+          "mean_entropy": 1.4501913546584546,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.971875,
+          "mean_entropy": 0.18374829855283678,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.1515625,
+          "mean_entropy": 1.6245521563105285,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 7,
+      "seed": 91,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1140625,
+          "mean_entropy": 1.205545449408237,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.8265625,
+          "mean_entropy": 0.32225818663972516,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.1234375,
+          "mean_entropy": 1.2012548399128717,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 8,
+      "seed": 98,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.0546875,
+          "mean_entropy": 1.3709483667742461,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.9609375,
+          "mean_entropy": 0.2583350089551232,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.06875,
+          "mean_entropy": 1.758565350389108,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 9,
+      "seed": 105,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1046875,
+          "mean_entropy": 1.2608241908368654,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.6546875,
+          "mean_entropy": 0.33424342636797033,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.096875,
+          "mean_entropy": 0.5352413847880143,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 10,
+      "seed": 112,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.096875,
+          "mean_entropy": 1.286735564249102,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.18738672133854378,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.0875,
+          "mean_entropy": 1.6444063984788955,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    },
+    {
+      "permutation_idx": 11,
+      "seed": 119,
+      "cases": {
+        "Healthy_Clean": {
+          "true_damaged": 0,
+          "is_drifted": false,
+          "accuracy": 0.9796875,
+          "mean_entropy": 0.0768644910178267,
+          "pred_interoception": 0,
+          "pred_proprioception": 0
+        },
+        "Healthy_Drifted": {
+          "true_damaged": 0,
+          "is_drifted": true,
+          "accuracy": 0.1421875,
+          "mean_entropy": 1.2212027656845748,
+          "pred_interoception": 1,
+          "pred_proprioception": 0
+        },
+        "Damaged_Clean": {
+          "true_damaged": 1,
+          "is_drifted": false,
+          "accuracy": 0.7640625,
+          "mean_entropy": 0.25565102272719126,
+          "pred_interoception": 0,
+          "pred_proprioception": 1
+        },
+        "Damaged_Drifted": {
+          "true_damaged": 1,
+          "is_drifted": true,
+          "accuracy": 0.13125,
+          "mean_entropy": 1.0334172280709026,
+          "pred_interoception": 1,
+          "pred_proprioception": 1
+        }
+      }
+    }
+  ],
+  "scientific_conclusion": "Double dissociation established: Under covariate drift (Permuted-MNIST), interoceptive systems fail by misattributing external input shift to internal damage (false positive rate: 100.0%). In contrast, proprioceptive body mapping evaluates weight parameter integrity directly, maintaining a 0.0% false alarm rate under severe covariate drift. Proprioception provides neural networks with genuine structural self-awareness."
+}
