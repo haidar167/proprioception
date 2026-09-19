@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-09-19T17:26:15.871628+00:00",
+  "seed": 0,
+  "git_commit": "1a96d6ffbbf0a72f52fde208f98a27d196c99cd2",
+  "healthy_baseline_test_acc": 0.9734,
+  "total_samples": 440,
+  "train_samples": 308,
+  "test_samples": 132,
+  "detection_metrics": {
+    "accuracy": 0.9696969696969697,
+    "precision": 0.96875,
+    "recall": 0.9722222222222222,
+    "f1": 0.9695852534562213,
+    "confusion_matrix": [
+      [
+        60,
+        0
+      ],
+      [
+        4,
+        68
+      ]
+    ],
+    "auc": 1.0
+  },
+  "localization_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "confusion_matrix": [
+      [
+        24,
+        0,
+        0
+      ],
+      [
+        0,
+        21,
+        0
+      ],
+      [
+        0,
+        0,
+        27
+      ]
+    ]
+  },
+  "acceptance": {
+    "auc_threshold": 0.95,
+    "auc_achieved": 1.0,
+    "auc_passed": true,
+    "localization_threshold": 0.8,
+    "localization_achieved": 1.0,
+    "localization_passed": true,
+    "overall_passed": true
+  },
+  "feature_names": [
+    "layer0_l2_norm",
+    "layer0_mean_abs",
+    "layer0_zero_frac",
+    "layer0_norm_change",
+    "layer1_l2_norm",
+    "layer1_mean_abs",
+    "layer1_zero_frac",
+    "layer1_norm_change",
+    "layer2_l2_norm",
+    "layer2_mean_abs",
+    "layer2_zero_frac",
+    "layer2_norm_change"
+  ]
+}

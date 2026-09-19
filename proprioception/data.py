@@ -1,7 +1,7 @@
 """Data utilities for MNIST, rehearsal buffering, and permuted-MNIST drift."""
 
 from pathlib import Path
-from typing import Tuple, Union
+from typing import Any, Tuple, Union
 
 import numpy as np
 import torch
