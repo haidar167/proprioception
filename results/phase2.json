@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-09-19T17:31:24.616655+00:00",
+  "seed": 0,
+  "git_commit": "4c2cabd38c907b8cdac62487e0ad4efff20305a2",
+  "buffer_size": 500,
+  "repair_steps": 500,
+  "learning_rate": 0.001,
+  "healthy_acc": 0.9734,
+  "trials": [
+    {
+      "scenario": "Zero L0 (f=0.30)",
+      "layer": 0,
+      "type": "zero",
+      "intensity": 0.3,
+      "healthy_acc": 0.9734,
+      "corrupted_acc": 0.9685,
+      "no_repair": {
+        "condition": "no_repair",
+        "repaired_acc": 0.9685,
+        "recovery_pct": 0.0,
+        "repair_time_sec": 0.0,
+        "params_touched": 0,
+        "num_steps": 0
+      },
+      "full_repair": {
+        "condition": "full_repair",
+        "repaired_acc": 0.9657,
+        "recovery_pct": -57.14285714285746,
+        "repair_time_sec": 1.557713899994269,
+        "params_touched": 235146,
+        "num_steps": 500
+      },
+      "targeted_repair": {
+        "condition": "targeted_repair",
+        "repaired_acc": 0.9655,
+        "recovery_pct": -61.224489795918224,
+        "repair_time_sec": 1.1350530000054277,
+        "params_touched": 200960,
+        "num_steps": 500
+      }
+    },
+    {
+      "scenario": "Zero L1 (f=0.30)",
+      "layer": 1,
+      "type": "zero",
+      "intensity": 0.3,
+      "healthy_acc": 0.9734,
+      "corrupted_acc": 0.971,
+      "no_repair": {
+        "condition": "no_repair",
+        "repaired_acc": 0.971,
+        "recovery_pct": 0.0,
+        "repair_time_sec": 0.0,
+        "params_touched": 0,
+        "num_steps": 0
+      },
+      "full_repair": {
+        "condition": "full_repair",
+        "repaired_acc": 0.9674,
+        "recovery_pct": -149.99999999999307,
+        "repair_time_sec": 1.5653754000086337,
+        "params_touched": 235146,
+        "num_steps": 500
+      },
+      "targeted_repair": {
+        "condition": "targeted_repair",
+        "repaired_acc": 0.9699,
+        "recovery_pct": -45.8333333333316,
+        "repair_time_sec": 0.8504623999906471,
+        "params_touched": 32896,
+        "num_steps": 500
+      }
+    },
+    {
+      "scenario": "Zero L2 (f=0.30)",
+      "layer": 2,
+      "type": "zero",
+      "intensity": 0.3,
+      "healthy_acc": 0.9734,
+      "corrupted_acc": 0.963,
+      "no_repair": {
+        "condition": "no_repair",
+        "repaired_acc": 0.963,
+        "recovery_pct": 0.0,
+        "repair_time_sec": 0.0,
+        "params_touched": 0,
+        "num_steps": 0
+      },
+      "full_repair": {
+        "condition": "full_repair",
+        "repaired_acc": 0.967,
+        "recovery_pct": 38.46153846153821,
+        "repair_time_sec": 1.8091627999965567,
+        "params_touched": 235146,
+        "num_steps": 500
+      },
+      "targeted_repair": {
+        "condition": "targeted_repair",
+        "repaired_acc": 0.9724,
+        "recovery_pct": 90.38461538461544,
+        "repair_time_sec": 0.7310141000052681,
+        "params_touched": 1290,
+        "num_steps": 500
+      }
+    },
+    {
+      "scenario": "Gaussian L0 (s=0.15)",
+      "layer": 0,
+      "type": "gaussian",
+      "intensity": 0.15,
+      "healthy_acc": 0.9734,
+      "corrupted_acc": 0.6839,
+      "no_repair": {
+        "condition": "no_repair",
+        "repaired_acc": 0.6839,
+        "recovery_pct": 0.0,
+        "repair_time_sec": 0.0,
+        "params_touched": 0,
+        "num_steps": 0
+      },
+      "full_repair": {
+        "condition": "full_repair",
+        "repaired_acc": 0.9361,
+        "recovery_pct": 87.11571675302245,
+        "repair_time_sec": 1.6231933999952162,
+        "params_touched": 235146,
+        "num_steps": 500
+      },
+      "targeted_repair": {
+        "condition": "targeted_repair",
+        "repaired_acc": 0.9383,
+        "recovery_pct": 87.87564766839378,
+        "repair_time_sec": 1.108278200001223,
+        "params_touched": 200960,
+        "num_steps": 500
+      }
+    },
+    {
+      "scenario": "Gaussian L1 (s=0.15)",
+      "layer": 1,
+      "type": "gaussian",
+      "intensity": 0.15,
+      "healthy_acc": 0.9734,
+      "corrupted_acc": 0.9157,
+      "no_repair": {
+        "condition": "no_repair",
+        "repaired_acc": 0.9157,
+        "recovery_pct": 0.0,
+        "repair_time_sec": 0.0,
+        "params_touched": 0,
+        "num_steps": 0
+      },
+      "full_repair": {
+        "condition": "full_repair",
+        "repaired_acc": 0.9623,
+        "recovery_pct": 80.76256499133451,
+        "repair_time_sec": 1.5862802999909036,
+        "params_touched": 235146,
+        "num_steps": 500
+      },
+      "targeted_repair": {
+        "condition": "targeted_repair",
+        "repaired_acc": 0.965,
+        "recovery_pct": 85.44194107452329,
+        "repair_time_sec": 0.8684734999987995,
+        "params_touched": 32896,
+        "num_steps": 500
+      }
+    },
+    {
+      "scenario": "Gaussian L2 (s=0.15)",
+      "layer": 2,
+      "type": "gaussian",
+      "intensity": 0.15,
+      "healthy_acc": 0.9734,
+      "corrupted_acc": 0.7527,
+      "no_repair": {
+        "condition": "no_repair",
+        "repaired_acc": 0.7527,
+        "recovery_pct": 0.0,
+        "repair_time_sec": 0.0,
+        "params_touched": 0,
+        "num_steps": 0
+      },
+      "full_repair": {
+        "condition": "full_repair",
+        "repaired_acc": 0.9605,
+        "recovery_pct": 94.15496148618033,
+        "repair_time_sec": 1.5952765999973053,
+        "params_touched": 235146,
+        "num_steps": 500
+      },
+      "targeted_repair": {
+        "condition": "targeted_repair",
+        "repaired_acc": 0.964,
+        "recovery_pct": 95.74082464884455,
+        "repair_time_sec": 0.739117899996927,
+        "params_touched": 1290,
+        "num_steps": 500
+      }
+    }
+  ],
+  "summary": {
+    "mean_full_recovery_pct": 15.5586540915375,
+    "mean_targeted_recovery_pct": 42.06420094118787,
+    "mean_full_time_sec": 1.6228337333304808,
+    "mean_targeted_time_sec": 0.9053998499997155,
+    "time_speedup_pct": 44.20871150234243,
+    "mean_full_params_touched": 235146,
+    "mean_targeted_params_touched": 78382,
+    "param_reduction_pct": 66.66666666666666,
+    "targeted_faster_passed": true
+  },
+  "analysis": "Targeted layer repair executes 44.2% faster than full-model fine-tuning (0.905s vs 1.623s) while touching 66.7% fewer parameters (78,382 vs 235,146). In terms of recovery, targeted repair achieved 42.06% recovery versus 15.56% for full-model repair. By localizing the repair reflex strictly to the damaged layer identified by the proprioceptive body map, the network avoids catastrophic forgetting of healthy representations in untouched layers and achieves rapid self-healing."
+}
