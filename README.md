@@ -25,15 +25,31 @@ Previous work on neural interoception equipped networks with monitors for their 
 
 ## 2. Theoretical Framework: The Neural Body Map
 
-For an $L$-layer neural network with weight tensors $\{W_1, W_2, \dots, W_L\}$ and a reference healthy checkpoint $\{W_1^{\text{ref}}, W_2^{\text{ref}}, \dots, W_L^{\text{ref}}\}$, the proprioceptive extractor constructs a per-layer 4-tuple statistic:
+Consider an $L$-layer neural network parameterized by weight matrices $\mathbf{W}_l \in \mathbb{R}^{M_l \times N_l}$ for $l \in \{0, 1, \dots, L-1\}$, where $P_l = M_l N_l$ denotes the parameter cardinality of layer $l$. Let $\mathbf{W}_l^{\text{ref}} \in \mathbb{R}^{M_l \times N_l}$ denote the corresponding weights of the verified healthy baseline checkpoint.
 
-$$\mathbf{s}_l = \left[ \|W_l\|_2, \quad \mathbb{E}[|W_l|], \quad \frac{1}{|W_l|}\sum \mathbb{I}(|w_{ij}| \le \epsilon), \quad \|W_l - W_l^{\text{ref}}\|_2 \right]$$
+For any current model state $\{\mathbf{W}_l\}_{l=0}^{L-1}$, the proprioceptive extractor constructs a per-layer 4-dimensional somatosensory feature vector $\mathbf{s}_l \in \mathbb{R}^4$:
 
-Concatenating across all layers yields the global body map vector:
+$$\mathbf{s}_l = \begin{bmatrix}
+\|\mathbf{W}_l\|_F \\
+\mu\left(|\mathbf{W}_l|\right) \\
+\zeta_\epsilon\left(\mathbf{W}_l\right) \\
+\|\mathbf{W}_l - \mathbf{W}_l^{\text{ref}}\|_F
+\end{bmatrix} \in \mathbb{R}^4$$
 
-$$\mathbf{m}_{\text{body}} = \left[ \mathbf{s}_1 \mathbin{\Vert} \mathbf{s}_2 \mathbin{\Vert} \dots \mathbin{\Vert} \mathbf{s}_L \right] \in \mathbb{R}^{4L}$$
+where:
+1. **Frobenius Weight Norm**:
+   $$\|\mathbf{W}_l\|_F = \sqrt{\sum_{i=1}^{M_l} \sum_{j=1}^{N_l} W_{l,ij}^2}$$
+2. **Mean Absolute Weight Magnitude**:
+   $$\mu\left(|\mathbf{W}_l|\right) = \frac{1}{M_l N_l} \sum_{i=1}^{M_l} \sum_{j=1}^{N_l} |W_{l,ij}|$$
+3. **Weight Sparsity / Zero Fraction** (threshold $\epsilon = 10^{-9}$):
+   $$\zeta_\epsilon\left(\mathbf{W}_l\right) = \frac{1}{M_l N_l} \sum_{i=1}^{M_l} \sum_{j=1}^{N_l} \mathbb{I}\left(|W_{l,ij}| \le \epsilon\right)$$
+4. **Structural Frobenius Displacement**:
+   $$\|\mathbf{W}_l - \mathbf{W}_l^{\text{ref}}\|_F = \sqrt{\sum_{i=1}^{M_l} \sum_{j=1}^{N_l} \left(W_{l,ij} - W_{l,ij}^{\text{ref}}\right)^2}$$
 
-For our 3-layer architecture (`784 -> 256 -> 128 -> 10`), this forms a compact **12-dimensional somatosensory feature vector**.
+Concatenating across all $L$ layers yields the global body map vector:
+$$\mathbf{m}_{\text{body}} = \operatorname{vec}\left(\mathbf{s}_0, \mathbf{s}_1, \dots, \mathbf{s}_{L-1}\right) \in \mathbb{R}^{4L}$$
+
+For our 3-layer architecture (`784 -> 256 -> 128 -> 10`), $L=3$, yielding an exact **12-dimensional somatosensory body map**.
 
 ```
       [ Healthy Baseline Checkpoint (W_ref) ]
@@ -84,7 +100,10 @@ True Layer 2 (fc3)          0                   0                   27
 ---
 
 ### Phase 2 — Self-Repair Reflex Benchmark
-When layer $L^*$ is diagnosed as damaged, the network activates a targeted self-repair reflex, fine-tuning only $L^*$ on a 500-sample rehearsal buffer for 500 steps.
+When layer $L^*$ is diagnosed as damaged, the network activates a targeted self-repair reflex, fine-tuning only $L^*$ on a 500-sample rehearsal buffer $\mathcal{B} = \{(\mathbf{x}_k, y_k)\}_{k=1}^{500}$ for 500 gradient steps.
+
+The **Accuracy Recovery Percentage** is defined as:
+$$\operatorname{Recovery} \% = \frac{\operatorname{Acc}(\mathcal{M}_{\text{repaired}}) - \operatorname{Acc}(\mathcal{M}_{\text{corrupted}})}{\operatorname{Acc}(\mathcal{M}_{\text{healthy}}) - \operatorname{Acc}(\mathcal{M}_{\text{corrupted}})} \times 100\%$$
 
 | Scenario | Condition | Corrupted Acc | Repaired Acc | Recovery % | Repair Time (s) | Params Touched |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
