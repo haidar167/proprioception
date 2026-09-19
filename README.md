@@ -29,12 +29,14 @@ Consider an $L$-layer neural network parameterized by weight matrices $\mathbf{W
 
 For any current model state $\{\mathbf{W}_l\}_{l=0}^{L-1}$, the proprioceptive extractor constructs a per-layer 4-dimensional somatosensory feature vector $\mathbf{s}_l \in \mathbb{R}^4$:
 
-$$\mathbf{s}_l = \begin{bmatrix}
+$$
+\mathbf{s}_l = \begin{bmatrix}
 \|\mathbf{W}_l\|_F \\
 \mu\left(|\mathbf{W}_l|\right) \\
 \zeta_\epsilon\left(\mathbf{W}_l\right) \\
 \|\mathbf{W}_l - \mathbf{W}_l^{\text{ref}}\|_F
-\end{bmatrix} \in \mathbb{R}^4$$
+\end{bmatrix} \in \mathbb{R}^4
+$$
 
 where:
 1. **Frobenius Weight Norm**:
@@ -47,7 +49,10 @@ where:
    $$\|\mathbf{W}_l - \mathbf{W}_l^{\text{ref}}\|_F = \sqrt{\sum_{i=1}^{M_l} \sum_{j=1}^{N_l} \left(W_{l,ij} - W_{l,ij}^{\text{ref}}\right)^2}$$
 
 Concatenating across all $L$ layers yields the global body map vector:
-$$\mathbf{m}_{\text{body}} = \operatorname{vec}\left(\mathbf{s}_0, \mathbf{s}_1, \dots, \mathbf{s}_{L-1}\right) \in \mathbb{R}^{4L}$$
+
+$$
+\mathbf{m}_{\text{body}} = \operatorname{vec}\left(\mathbf{s}_0, \mathbf{s}_1, \dots, \mathbf{s}_{L-1}\right) \in \mathbb{R}^{4L}
+$$
 
 For our 3-layer architecture (`784 -> 256 -> 128 -> 10`), $L=3$, yielding an exact **12-dimensional somatosensory body map**.
 
@@ -59,7 +64,7 @@ For our 3-layer architecture (`784 -> 256 -> 128 -> 10`), $L=3$, yielding an exa
                         │
                         ▼
            [ Body Map Extractor (12-D) ]
-      ||W||₂, E[|w|], % zeros, ||W - W_ref||₂
+      ||W||_F, E[|W|], % zeros, ||W - W_ref||_F
          │                           │
          ▼                           ▼
 [ Damage Detector ]         [ Damage Localizer ]
