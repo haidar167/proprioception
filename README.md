@@ -237,3 +237,18 @@ python -m proprioception.phase3_drift_dissociation --seed 42 --permutations 12
 1. **Static vs. Continuous Body Maps**: Currently, norm change features compare weights against a frozen reference checkpoint. In continual learning scenarios, the body map must dynamically track gradient velocity or natural weight displacement during valid task learning.
 2. **Architecture Scalability**: Evaluated on multi-layer perceptrons on MNIST. Extending body maps to Vision Transformers (attention projection weights) and ConvNets (filter spatial norms) is a natural next step.
 3. **Somatosensory Integration**: The ultimate cognitive architecture combines both **interoception** (what the network feels about its outputs) and **proprioception** (what the network feels about its weights) into a unified hierarchical self-model.
+
+---
+
+## 🌐 The Neural Self-Awareness Continuum
+
+| # | Project | Biological Analogy | Core Capability | Live Link |
+|---|---|---|---|---|
+| **1** | **[Interoception](https://haidar167.github.io/interoception/)** | Internal visceral sensing | Senses internal confusion via hidden activation stats | [GitHub](https://github.com/haidar167/interoception) |
+| **2** | **[Proprioception](https://haidar167.github.io/proprioception/)** | Body substrate awareness | Senses weight damage & localizes corrupted layers | [GitHub](https://github.com/haidar167/proprioception) |
+| **3** | **[Meta-Interoception](https://haidar167.github.io/meta-interoception/)** | Metacognitive monitoring | Monitors the calibration of its own self-monitors | [GitHub](https://github.com/haidar167/meta-interoception) |
+| **4** | **[Nociception](https://haidar167.github.io/nociception/)** | Pain-driven help seeking | Spends limited human supervision budget on likely errors | [GitHub](https://github.com/haidar167/nociception) |
+| **5** | **[SOMNIA](https://haidar167.github.io/somnia/)** | Targeted sleep consolidation | Dreams targeted examples to patch its own weak spots | [GitHub](https://github.com/haidar167/somnia) |
+
+---
+*Part of the Neural Self-Awareness research continuum by [haidar167](https://github.com/haidar167).*
